@@ -3,6 +3,7 @@ package com.quiz.onlinequiz.service;
 import com.quiz.onlinequiz.model.Quiz;
 import com.quiz.onlinequiz.repository.QuizRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,7 +14,7 @@ public class QuizService {
     @Autowired
     private QuizRepository quizRepository;
 
-    public Quiz createQuiz(Quiz quiz) {
+    public Quiz createQuiz(@NonNull Quiz quiz) {
         return quizRepository.save(quiz);
     }
 
